@@ -5,7 +5,7 @@ function Course() {
   return (
     <div>
       <div className="flex">
-        <aside className="h-screen sticky top-0 phone:invisible">
+        <aside className="h-screen sticky top-0">
           <div className="flex flex-col h-screen p-3 bg-blue-500 shadow w-60">
             <div className="space-y-3">
               <div className="flex items-center">
@@ -70,12 +70,12 @@ function Course() {
           </div>
         </aside>
         <main>
-          <div className="flex flex-col items-center justify-center relative left-40 top-10 phone:left-1">
+          <div className="flex flex-col items-center justify-center relative left-40 top-10">
             <h2 className="text-2xl m-2 font-poppins text-blue-500 underline">
               Première Partie:
             </h2>
             <div className="flex flex-col items-center">
-              <video width="800" height="800" controls className="phone:w-45">
+              <video width="800" height="800" controls>
                 <source
                   src="https://shark-app-zrqqk.ondigitalocean.app/videoOne"
                   type="video/mp4"
