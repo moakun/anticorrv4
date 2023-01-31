@@ -55,7 +55,7 @@ function newHome() {
           <span className="font-poppins">
             En Cas De Problème
             <br /> Veuillez Contactez l'email Suivant:
-            <br /> moatassimbarakat@gmail.com
+            <br /> developedbymoe@gmail.com
           </span>
         </div>
       </div>
