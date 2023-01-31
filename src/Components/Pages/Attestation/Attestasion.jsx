@@ -35,7 +35,7 @@ function Attestasion() {
                   {user.companyName}
                 </span>
                 <h3 className="text-gray-700 font-tinos text-lg">
-                  a suivi avec succès le program de formation suivant :
+                  a suivi avec succès le programe de formation suivant :
                 </h3>
                 <br />
                 <h1 className="font-bold font-tinos text-2xl">

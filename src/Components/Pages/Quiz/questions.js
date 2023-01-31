@@ -61,9 +61,8 @@ const questions = [
     ],
   },
   {
-    question:
-      'SOGEA SATOM Bénin a interdit les cadeaux sous toutes les formes:',
-    answerOptions: [{ answer: 'VRAI' }, { answer: 'FAUX', isCorrect: true }],
+    question: 'SOGEA SATOM Bénin a interdit les cadeaux en espèce:',
+    answerOptions: [{ answer: 'VRAI', isCorrect: true }, { answer: 'FAUX' }],
   },
   {
     question:
