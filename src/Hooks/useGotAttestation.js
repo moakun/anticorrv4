@@ -1,33 +1,26 @@
 import { useState } from 'react';
 import { useAuthContext } from './useAuthContext';
-import { useNavigate } from 'react-router-dom';
 
-export const useRegister = () => {
+export const useGotAttestation = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
-  const navigate = useNavigate();
-  const register = async (
-    firstName,
-    lastName,
-    userName,
-    companyName,
-    password
-  ) => {
+
+  const gotAttestation = async (userName) => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch('http://localhost:3000/api/user/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        userName,
-        companyName,
-        password,
-      }),
-    });
+    const response = await fetch(
+      'http://localhost:3000/api/user/gotAttestation',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userName,
+        }),
+      }
+    );
+
     const json = await response.json();
 
     if (!response.ok) {
@@ -42,9 +35,8 @@ export const useRegister = () => {
       dispatch({ type: 'LOGIN', payload: json });
 
       setIsLoading(false);
-      navigate('/');
     }
   };
 
-  return { register, isLoading, error };
+  return { gotAttestation, isLoading, error };
 };
