@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../Assets/Logo.png';
 import { useAuthContext } from '../../../Hooks/useAuthContext';
 import jsPDF from 'jspdf';
+import { useGotAttestation } from '../../../Hooks/useGotAttestation';
 
 function Attestasion() {
   const { user } = useAuthContext();
@@ -10,6 +11,13 @@ function Attestasion() {
     current.getMonth() + 1
   }/${current.getFullYear()}`;
 
+  const [userName] = useState(user.userName);
+  const { gotAttestation } = useGotAttestation();
+
+  const handleSubmit = async () => {
+    await gotAttestation(userName);
+  };
+
   const generatePDF = () => {
     const doc = new jsPDF('landscape', 'pt', 'a4');
     doc.html(document.querySelector('#content'), {
@@ -17,6 +25,7 @@ function Attestasion() {
         pdf.save('Attestation.pdf');
       },
     });
+    handleSubmit();
   };
 
   return (
@@ -31,7 +40,7 @@ function Attestasion() {
                   Sogea Satom Bénin certifie que
                 </h3>
                 <span className="text-gray-700 font-tinos text-lg">
-                  {user.firstName} {user.lastName.toUpperCase()} de la Société{' '}
+                  {user.firstName} {user.lastName} de la Société{' '}
                   {user.companyName}
                 </span>
                 <h3 className="text-gray-700 font-tinos text-lg">
