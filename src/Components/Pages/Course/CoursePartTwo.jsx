@@ -87,7 +87,7 @@ function CoursePartTwo() {
               <div className="flex flex-col items-center">
                 <video width="800" height="800" controls>
                   <source
-                    src="https://shark-app-zrqqk.ondigitalocean.app/videoTwo"
+                    src="https://d21ulo4r1z07kx.cloudfront.net/PartTwo.mp4"
                     type="video/mp4"
                   ></source>
                 </video>
