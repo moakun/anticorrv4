@@ -11,7 +11,7 @@ export const useTestUpdateScore = () => {
     setError(null);
 
     const response = await fetch(
-      'http://localhost:3000/api/user/testUpdateScore',
+      'https://shark-app-zrqqk.ondigitalocean.app/api/user/testUpdateScore',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

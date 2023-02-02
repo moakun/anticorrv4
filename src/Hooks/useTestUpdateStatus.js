@@ -10,13 +10,16 @@ export const useTestUpdateStatus = () => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch('http://localhost:3000/api/user/testStatus', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userName,
-      }),
-    });
+    const response = await fetch(
+      'https://shark-app-zrqqk.ondigitalocean.app/api/user/testStatus',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userName,
+        }),
+      }
+    );
 
     const json = await response.json();
 
