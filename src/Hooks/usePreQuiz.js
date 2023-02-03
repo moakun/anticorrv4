@@ -23,22 +23,25 @@ export const usePreQuiz = () => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch('http://localhost:3000/api/user/preQuiz', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userName,
-        dispositif,
-        engagement,
-        identification,
-        formation,
-        procedure,
-        dispositifAlert,
-        certifierISO,
-        mepSystem,
-        intention,
-      }),
-    });
+    const response = await fetch(
+      'https://shark-app-zrqqk.ondigitalocean.app/api/user/preQuiz',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userName,
+          dispositif,
+          engagement,
+          identification,
+          formation,
+          procedure,
+          dispositifAlert,
+          certifierISO,
+          mepSystem,
+          intention,
+        }),
+      }
+    );
 
     const json = await response.json();
     if (!response.ok) {
