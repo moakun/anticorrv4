@@ -8,6 +8,7 @@ import Register from './Components/Pages/Auth/newRegister';
 import Attestation from './Components/Pages/Attestation/Attestasion';
 import QuizError from './Components/Pages/Quiz/QuizError';
 import Course2 from './Components/Pages/Course/CoursePartTwo';
+import PreQuiz from './Components/Pages/Quiz/preQuiz';
 
 function App() {
   const { user } = useAuthContext();
@@ -34,6 +35,10 @@ function App() {
         <Route
           path="/quiz"
           element={user ? <Quiz /> : <Navigate to="/register" />}
+        />
+        <Route
+          path="/preQuiz"
+          element={user ? <PreQuiz /> : <Navigate to="/register" />}
         />
         <Route
           path="/attestation"

@@ -69,9 +69,9 @@ function Quiz() {
     return (
       <div>
         <span className="text-green-400">Bravo!</span>
-        <Link to="/attestation">
+        <Link to="/preQuiz">
           <button className="flex flex-col font-poppins bg-blue-500 text-white p-3 mt-5 rounded hover:text-black transition ease-in delay-50">
-            Votre Attestation Ici!
+            Veuillez Remplir Notre Questionnaire Ici
           </button>
         </Link>
       </div>

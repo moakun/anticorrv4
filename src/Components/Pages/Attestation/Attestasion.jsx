@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../Assets/Logo.png';
+import { Alert, AlertTitle } from '@mui/material';
 import { useAuthContext } from '../../../Hooks/useAuthContext';
 import jsPDF from 'jspdf';
 import { useGotAttestation } from '../../../Hooks/useGotAttestation';
@@ -65,6 +66,13 @@ function Attestasion() {
         >
           Télécharger Votre Attestation Ici!
         </button>
+      </div>
+      <div>
+        <Alert severity="info">
+          <AlertTitle>Envoyer Votre Attestation</AlertTitle>
+          Après avoir télecharger votre Attestation, veuillez l'envoyer à
+          L'email Suivant: developedbymoe@gmail.com
+        </Alert>
       </div>
     </div>
   );
