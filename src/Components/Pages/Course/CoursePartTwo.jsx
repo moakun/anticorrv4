@@ -87,7 +87,7 @@ function CoursePartTwo() {
               <div className="flex flex-col items-center">
                 <video width="800" height="800" controls>
                   <source
-                    src="https://d21ulo4r1z07kx.cloudfront.net/Part%20Two%20Final.mp4"
+                    src="https://d21ulo4r1z07kx.cloudfront.net/Part%20Two%20Finale.mp4"
                     type="video/mp4"
                   ></source>
                 </video>
