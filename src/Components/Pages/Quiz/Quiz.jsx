@@ -4,7 +4,6 @@ import { Alert, AlertTitle } from '@mui/material';
 import '../../../index.css';
 import questions from './questions';
 import { useTestUpdateScore } from '../../../Hooks/useTestUpdateScore';
-import { useTestUpdateStatus } from '../../../Hooks/useTestUpdateStatus';
 import Loading from '../Auth/buildingBlocks';
 import { useAuthContext } from '../../../Hooks/useAuthContext';
 
@@ -19,7 +18,6 @@ function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  const { updateTestStatus } = useTestUpdateStatus();
 
   const handlePrevious = () => {
     const prevQues = currentQuestion - 1;
@@ -39,12 +37,8 @@ function Quiz() {
     console.log(selectedOptions);
   };
 
-  const handleSubmitStatus = async () => {
-    await updateTestStatus(userName, firstName, lastName, companyName);
-  };
-
   const handleSubmit = async () => {
-    await testUpdateScore(userName, score, firstName, lastName, companyName);
+    await testUpdateScore(userName, firstName, lastName, companyName, score);
   };
 
   const handleSubmitButton = async () => {
@@ -64,7 +58,6 @@ function Quiz() {
   useEffect(() => {
     if (score) {
       handleSubmit();
-      handleSubmitStatus();
     }
   }, [score]);
 

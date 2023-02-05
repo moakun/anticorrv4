@@ -10,8 +10,8 @@ export const useTestUpdateScore = () => {
     userName,
     firstName,
     lastName,
-    score,
-    companyName
+    companyName,
+    score
   ) => {
     setIsLoading(true);
     setError(null);
@@ -23,10 +23,10 @@ export const useTestUpdateScore = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userName,
-          score,
           firstName,
           lastName,
           companyName,
+          score,
         }),
       }
     );

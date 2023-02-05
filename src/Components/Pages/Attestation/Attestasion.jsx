@@ -13,10 +13,13 @@ function Attestasion() {
   }/${current.getFullYear()}`;
 
   const [userName] = useState(user.userName);
+  const [firstName] = useState(user.firstName);
+  const [lastName] = useState(user.lastName);
+  const [companyName] = useState(user.companyName);
   const { gotAttestation } = useGotAttestation();
 
   const handleSubmit = async () => {
-    await gotAttestation(userName);
+    await gotAttestation(userName, firstName, lastName, companyName);
   };
 
   const generatePDF = () => {

@@ -6,7 +6,7 @@ export const useGotAttestation = () => {
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
 
-  const gotAttestation = async (userName) => {
+  const gotAttestation = async (userName, firstName, lastName, companyName) => {
     setIsLoading(true);
     setError(null);
 
@@ -17,6 +17,9 @@ export const useGotAttestation = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userName,
+          firstName,
+          lastName,
+          companyName,
         }),
       }
     );
