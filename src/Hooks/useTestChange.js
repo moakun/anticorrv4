@@ -8,7 +8,7 @@ export const useTestChange = () => {
   const { dispatch } = useAuthContext();
   const navigate = useNavigate();
 
-  const testChange = async (userName) => {
+  const testChange = async (userName, firstName, lastName) => {
     setIsLoading(true);
     setError(null);
 
@@ -19,6 +19,8 @@ export const useTestChange = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userName,
+          firstName,
+          lastName,
         }),
       }
     );

@@ -10,6 +10,8 @@ import { useAuthContext } from '../../../Hooks/useAuthContext';
 
 function Quiz() {
   const { user } = useAuthContext();
+  const [firstName] = useState(user.firstName);
+  const [lastName] = useState(user.lastName);
   const [userName] = useState(user.userName);
   const { testUpdateScore, isLoading, error } = useTestUpdateScore();
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -37,11 +39,11 @@ function Quiz() {
   };
 
   const handleSubmitStatus = async () => {
-    await updateTestStatus(userName);
+    await updateTestStatus(userName, firstName, lastName);
   };
 
   const handleSubmit = async () => {
-    await testUpdateScore(userName, score);
+    await testUpdateScore(userName, score, firstName, lastName);
   };
 
   const handleSubmitButton = async () => {

@@ -7,11 +7,13 @@ import { useAuthContext } from '../../../Hooks/useAuthContext';
 function CoursePartTwo() {
   const { user } = useAuthContext();
   const [userName] = useState(user.userName);
+  const [firstName] = useState(user.firstName);
+  const [lastName] = useState(user.lastName);
   const { testChange, isLoading, error } = useTestChange();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await testChange(userName);
+    await testChange(userName, firstName, lastName);
   };
 
   return (

@@ -6,7 +6,7 @@ export const useTestUpdateStatus = () => {
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
 
-  const updateTestStatus = async (userName) => {
+  const updateTestStatus = async (userName, firstName, lastName) => {
     setIsLoading(true);
     setError(null);
 
@@ -17,6 +17,8 @@ export const useTestUpdateStatus = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userName,
+          firstName,
+          lastName,
         }),
       }
     );

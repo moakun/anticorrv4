@@ -10,6 +10,8 @@ export const usePreQuiz = () => {
 
   const preQuiz = async (
     userName,
+    firstName,
+    lastName,
     dispositif,
     engagement,
     identification,
@@ -30,6 +32,8 @@ export const usePreQuiz = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userName,
+          firstName,
+          lastName,
           dispositif,
           engagement,
           identification,
