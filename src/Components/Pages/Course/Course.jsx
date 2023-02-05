@@ -57,13 +57,6 @@ function Course() {
                       </span>
                     </a>
                   </li>
-                  <li className="rounded-sm">
-                    <a className="flex items-center p-2 space-x-3 rounded-md">
-                      <span className="text-gray-100 hover:text-black font-poppins">
-                        Procédure D’évaluation des tiers
-                      </span>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>

@@ -69,6 +69,13 @@ function CoursePartTwo() {
                     <li className="rounded-sm">
                       <a className="flex items-center p-2 space-x-3 rounded-md">
                         <span className="text-gray-100 hover:text-black font-poppins">
+                          Charte Relations Sous-Traitrants
+                        </span>
+                      </a>
+                    </li>
+                    <li className="rounded-sm">
+                      <a className="flex items-center p-2 space-x-3 rounded-md">
+                        <span className="text-gray-100 hover:text-black font-poppins">
                           9 mesures de Base concrètes pour lutter contre la
                           corruption et prévenir les conflits d’intérêt
                         </span>
@@ -85,7 +92,7 @@ function CoursePartTwo() {
                 Deuxième Partie:
               </h2>
               <div className="flex flex-col items-center">
-                <video width="800" height="800" controls>
+                <video width="600" height="600" controls>
                   <source
                     src="https://d21ulo4r1z07kx.cloudfront.net/Part%20Two%20Finale.mp4"
                     type="video/mp4"
