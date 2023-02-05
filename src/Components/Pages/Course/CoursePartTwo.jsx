@@ -9,11 +9,12 @@ function CoursePartTwo() {
   const [userName] = useState(user.userName);
   const [firstName] = useState(user.firstName);
   const [lastName] = useState(user.lastName);
+  const [companyName] = useState(user.companyName);
   const { testChange, isLoading, error } = useTestChange();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await testChange(userName, firstName, lastName);
+    await testChange(userName, firstName, lastName, companyName);
   };
 
   return (

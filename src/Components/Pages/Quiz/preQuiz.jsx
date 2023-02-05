@@ -9,6 +9,7 @@ const preQuiz = () => {
   const [firstName] = useState(user.firstName);
   const [lastName] = useState(user.lastName);
   const [userName] = useState(user.userName);
+  const [companyName] = useState(user.companyName);
   const [dispositif, setDispositif] = useState('');
   const [engagement, setEngagement] = useState('');
   const [identification, setIdentification] = useState('');
@@ -27,6 +28,7 @@ const preQuiz = () => {
       userName,
       firstName,
       lastName,
+      companyName,
       dispositif,
       engagement,
       identification,

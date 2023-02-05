@@ -6,7 +6,12 @@ export const useTestUpdateStatus = () => {
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
 
-  const updateTestStatus = async (userName, firstName, lastName) => {
+  const updateTestStatus = async (
+    userName,
+    firstName,
+    lastName,
+    companyName
+  ) => {
     setIsLoading(true);
     setError(null);
 
@@ -19,6 +24,7 @@ export const useTestUpdateStatus = () => {
           userName,
           firstName,
           lastName,
+          companyName,
         }),
       }
     );

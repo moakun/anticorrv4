@@ -13,6 +13,7 @@ function Quiz() {
   const [firstName] = useState(user.firstName);
   const [lastName] = useState(user.lastName);
   const [userName] = useState(user.userName);
+  const [companyName] = useState(user.companyName);
   const { testUpdateScore, isLoading, error } = useTestUpdateScore();
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -39,11 +40,11 @@ function Quiz() {
   };
 
   const handleSubmitStatus = async () => {
-    await updateTestStatus(userName, firstName, lastName);
+    await updateTestStatus(userName, firstName, lastName, companyName);
   };
 
   const handleSubmit = async () => {
-    await testUpdateScore(userName, score, firstName, lastName);
+    await testUpdateScore(userName, score, firstName, lastName, companyName);
   };
 
   const handleSubmitButton = async () => {

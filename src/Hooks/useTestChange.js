@@ -8,7 +8,7 @@ export const useTestChange = () => {
   const { dispatch } = useAuthContext();
   const navigate = useNavigate();
 
-  const testChange = async (userName, firstName, lastName) => {
+  const testChange = async (userName, firstName, lastName, companyName) => {
     setIsLoading(true);
     setError(null);
 
@@ -21,6 +21,7 @@ export const useTestChange = () => {
           userName,
           firstName,
           lastName,
+          companyName,
         }),
       }
     );

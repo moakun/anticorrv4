@@ -6,7 +6,13 @@ export const useTestUpdateScore = () => {
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
 
-  const testUpdateScore = async (userName, firstName, lastName, score) => {
+  const testUpdateScore = async (
+    userName,
+    firstName,
+    lastName,
+    score,
+    companyName
+  ) => {
     setIsLoading(true);
     setError(null);
 
@@ -20,6 +26,7 @@ export const useTestUpdateScore = () => {
           score,
           firstName,
           lastName,
+          companyName,
         }),
       }
     );
