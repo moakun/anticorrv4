@@ -88,16 +88,16 @@ const questions = [
     answerOptions: [
       {
         answer:
-          'La consultation de la base de données world-check/ sources ouvertes + un questionnaire à faire remplir par le partenaire commercial',
+          'La consultation de la base de données world-check ou équivalent + Articles de presse + Politique Anti Corruption disponible sur source ouverte',
+      },
+      {
+        answer:
+          'La consultation de la base de données world-check ou équivalent + Articles de presse + Politique Anti Corruption à fournir + Questionnaire à fournir par le prestataire',
         isCorrect: true,
       },
       {
         answer:
-          'La consultation de la base de données world-check/ sources ouvertes + une attestation à fournir par le partenaire commercial',
-      },
-      {
-        answer:
-          'La consultation de la base de données world-check/ sources ouvertes',
+          'La consultation de la base de données world-check ou équivalent',
       },
       { answer: 'Les trois réponses sont bonnes' },
     ],

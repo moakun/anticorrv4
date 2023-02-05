@@ -44,7 +44,7 @@ const preQuiz = () => {
           <div className="w-full p-6 m-auto bg-white rounded-md shadow-2xl max-w-xl">
             <h1 className="text-3xl font-semibold font-poppins text-center text-blue-700">
               Veuillez Répondre à ce Questionnaire Par "Oui", "Non" ou Donner la
-              date pévu de l'execution.
+              date pévu de mise en oeuvre.
             </h1>
             <form className="mt-6" onSubmit={handleSubmit}>
               <div className="mb-2">
