@@ -44,8 +44,8 @@ function Attestasion() {
                   Sogea Satom Bénin certifie que
                 </h3>
                 <span className="text-gray-700 font-tinos text-lg">
-                  {user.firstName} {user.lastName} de la Société{' '}
-                  {user.companyName}
+                  {user.firstName.toUpperCase()} {user.lastName.toUpperCase()}{' '}
+                  de la Société {user.companyName}
                 </span>
                 <h3 className="text-gray-700 font-tinos text-lg">
                   a suivi avec succès le programe de formation suivant :
@@ -62,6 +62,13 @@ function Attestasion() {
           </div>
         </div>
       </div>
+      <div>
+        <Alert severity="info">
+          <AlertTitle>Envoyer Votre Attestation</AlertTitle>
+          Après avoir télecharger votre Attestation, veuillez l'envoyer à
+          L'email Suivant: developedbymoe@gmail.com
+        </Alert>
+      </div>
       <div className="relative left-64">
         <button
           className="font-poppins bg-blue-500 rounded hover:text-black text-white transition ease-in delay-50 p-3"
@@ -69,13 +76,6 @@ function Attestasion() {
         >
           Télécharger Votre Attestation Ici!
         </button>
-      </div>
-      <div>
-        <Alert severity="info">
-          <AlertTitle>Envoyer Votre Attestation</AlertTitle>
-          Après avoir télecharger votre Attestation, veuillez l'envoyer à
-          L'email Suivant: developedbymoe@gmail.com
-        </Alert>
       </div>
     </div>
   );
